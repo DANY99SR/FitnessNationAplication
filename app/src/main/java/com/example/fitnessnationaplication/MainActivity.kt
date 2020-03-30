@@ -9,6 +9,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setContentView(R.layout.activity_main)
-        //pmapmapama
+        setContentView(R.layout.activity_main)
     }
 }
