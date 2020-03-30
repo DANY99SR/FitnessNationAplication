@@ -10,5 +10,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setContentView(R.layout.activity_main)
         setContentView(R.layout.activity_main)
+        //hi, my name is daniel
     }
 }
