@@ -9,7 +9,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setContentView(R.layout.activity_main)
-        setContentView(R.layout.activity_main)
-        //hi, my name is daniel
+
     }
 }
