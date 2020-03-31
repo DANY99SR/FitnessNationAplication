@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">FitnessNationAplication</string>
+
+    <string name="finess_nation_title">WELCOME \ TO</string>
+    <string name="join_session">Let\'s start</string>
 </resources>
