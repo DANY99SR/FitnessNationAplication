@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun gotoSessionActivity(){
-        val intent = Intent(this, FinessNationSessionActivity::class.java)
+        val intent = Intent(this, FitnessNationSessionActivity::class.java)
         startActivity(intent)
     }
 }
