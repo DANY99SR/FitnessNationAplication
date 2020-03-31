@@ -3,4 +3,8 @@
 
     <string name="finess_nation_title">WELCOME \ TO</string>
     <string name="join_session">Let\'s start</string>
+    <string name="login">LOGIN</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
