@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_go_to_sessions.setOnClickListener {
+        this.btn_go_to_sessions.setOnClickListener {
             gotoSessionActivity()
         }
 

@@ -10,7 +10,8 @@ import com.example.fitnessnationaplication.R
 class F1A2: Fragment() {
 
     companion object{
-        fun newInstance() :F1A2 = F1A2()
+
+        fun newInstance()=F1A2()
     }
     override fun onCreateView(
         inflater: LayoutInflater,

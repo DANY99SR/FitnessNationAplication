@@ -3,37 +3,61 @@ package com.example.fitnessnationaplication.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.fitnessnationaplication.R
+import com.example.fitnessnationaplication.fragments.F1A1
+import com.example.fitnessnationaplication.fragments.F1A2
 import kotlinx.android.synthetic.main.activity_fitness_nation_session.*
 
 class FitnessNationSessionActivity : AppCompatActivity() {
 
     companion object {
-        enum class FragmentTags(value: String) {
-            TAG_FRAGMENT_F1_A1("TAG_FRAGMENT_F1_A1"),
-            TAG_FRAGMENT_F1_A2("TAG_FRAGMENT_F1_A2")
+        enum class FragmentTags(val value: String) {
+            TAG_FRAGMENT_F1A1("TAG_FRAGMENT_F1A1"),
+            TAG_FRAGMENT_F1A2("TAG_FRAGMENT_F1A2")
         }
     }
 
-    var currentFragmentTag: String? = null
+    var currentFragmentTag: FragmentTags? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fitness_nation_session)
-
-        btn_trigger.setOnClickListener{
+        btn_login.setOnClickListener {
+            changeFragment()
 
         }
     }
 
-    fun loginFragment() {
-        currentFragmentTag = when (currentFragmentTag) {
-            null -> TAG_FRAGMENT_F1_A1
-            TAG_FRAGMENT_F1_A1 -> TAG_FRAGMENT_F1_A2
-            TAG_FRAGMENT_F1_A2 -> TAG_FRAGMENT_F1_A1
+    fun changeFragment() {
+
+        val currentFragmentTag = when (currentFragmentTag) {
+            null -> FragmentTags.TAG_FRAGMENT_F1A1
+            FragmentTags.TAG_FRAGMENT_F1A1 -> FragmentTags.TAG_FRAGMENT_F1A2
+            FragmentTags.TAG_FRAGMENT_F1A2 -> FragmentTags.TAG_FRAGMENT_F1A1
+
         }
         replaceFragment(currentFragmentTag)
     }
 
-    fun replaceFragment(TAG: String) {
+    private fun replaceFragment(TAG: FragmentTags?) {
+        TAG?.run {
 
+            val fragment = when (this) {
+                FragmentTags.TAG_FRAGMENT_F1A1 -> F1A1.newInstance()
+                FragmentTags.TAG_FRAGMENT_F1A2 -> F1A2.newInstance()
+
+            }
+
+            val transaction = supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.fly_android_session, fragment,this.value)
+            transaction.addToBackStack(this.value)
+            transaction.commit()
+
+
+
+        }
     }
 }
+
+
+
