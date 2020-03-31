@@ -20,7 +20,7 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/finess_nation_title"
+        android:text="@string/fitness_nation_title"
         android:textSize="@dimen/title_text_size"
 
         app:layout_constraintLeft_toLeftOf="parent"
